@@ -1,0 +1,5 @@
+prefix_length,task,target_variant,selected_model,primary_metric,temporal_score,random_score
+3,long_case_classification,long_case_q75,Random Forest,pr_auc,0.16147370531422517,0.25468299590458227
+3,remaining_time_regression,remaining_time_hours,Median Baseline,mae,354.92544655414906,675.9194778481012
+5,long_case_classification,long_case_q75,Logistic Regression,pr_auc,0.18085389573217808,0.20059466057640318
+5,remaining_time_regression,remaining_time_hours,Median Baseline,mae,362.72299019607846,649.2754974582426

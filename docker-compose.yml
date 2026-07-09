@@ -1,0 +1,46 @@
+services:
+  init:
+    build: .
+    command:
+      - sh
+      - -c
+      - >-
+        python -m src.data_generation.generate_claims_event_log &&
+        python -m src.ingestion.load_to_db &&
+        python -m src.ml.train_all
+    environment:
+      WORKLENS_DATABASE_URL: sqlite:////app/runtime/worklens.db
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - database:/app/runtime
+  dashboard:
+    build: .
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    ports:
+      - "8501:8501"
+    environment:
+      WORKLENS_DATABASE_URL: sqlite:////app/runtime/worklens.db
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - database:/app/runtime
+  api:
+    build: .
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    command: ["uvicorn", "backend.main:app", "--host=0.0.0.0", "--port=8000"]
+    ports:
+      - "8000:8000"
+    environment:
+      WORKLENS_DATABASE_URL: sqlite:////app/runtime/worklens.db
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - database:/app/runtime
+
+volumes:
+  database:

@@ -1,0 +1,6 @@
+{
+  "model": "Isolation Forest on completed-case features",
+  "mode": "retrospective_anomaly_investigation",
+  "threshold": 0.9850002999999999,
+  "flagged_cases": 750
+}

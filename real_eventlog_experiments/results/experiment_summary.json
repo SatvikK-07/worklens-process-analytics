@@ -1,0 +1,859 @@
+{
+  "dataset": "Sepsis Cases Event Log",
+  "source": "4TU.ResearchData DOI 10.4121/uuid:915d2bfb-7e84-49ad-a286-dc35f063a460",
+  "run_type": "full_public_event_log",
+  "case_count": 1050,
+  "event_count": 15214,
+  "activity_count": 16,
+  "variant_count": 846,
+  "start_timestamp": "2013-11-07T07:18:29+00:00",
+  "end_timestamp": "2015-06-05T10:25:11+00:00",
+  "average_events_per_case": 14.48952380952381,
+  "median_events_per_case": 13.0,
+  "missing_values": {
+    "event_id": 0,
+    "case_id": 0,
+    "activity": 0,
+    "timestamp": 0,
+    "resource": 0,
+    "lifecycle": 0,
+    "duration_minutes": 0
+  },
+  "process_validation": {
+    "chronology_check": true,
+    "transition_analysis": true,
+    "variant_extraction": true,
+    "rework_case_rate": 0.7085714285714285,
+    "top_variants": [
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage",
+        "cases": 35
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 CRP",
+        "cases": 24
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 CRP \u2192 Leucocytes",
+        "cases": 22
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 CRP \u2192 LacticAcid \u2192 Leucocytes \u2192 IV Liquid \u2192 IV Antibiotics",
+        "cases": 13
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 CRP \u2192 LacticAcid",
+        "cases": 11
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 CRP \u2192 LacticAcid \u2192 IV Liquid \u2192 IV Antibiotics",
+        "cases": 9
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 LacticAcid \u2192 CRP \u2192 IV Liquid \u2192 IV Antibiotics",
+        "cases": 7
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 CRP \u2192 Admission NC \u2192 Release A",
+        "cases": 5
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 LacticAcid \u2192 Leucocytes \u2192 CRP \u2192 IV Liquid \u2192 IV Antibiotics",
+        "cases": 5
+      },
+      {
+        "variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 CRP \u2192 Leucocytes \u2192 LacticAcid \u2192 IV Liquid \u2192 IV Antibiotics",
+        "cases": 5
+      }
+    ],
+    "top_transitions": [
+      {
+        "source": "Leucocytes",
+        "target": "CRP",
+        "count": 1778
+      },
+      {
+        "source": "CRP",
+        "target": "Leucocytes",
+        "count": 1445
+      },
+      {
+        "source": "ER Registration",
+        "target": "ER Triage",
+        "count": 971
+      },
+      {
+        "source": "ER Triage",
+        "target": "ER Sepsis Triage",
+        "count": 905
+      },
+      {
+        "source": "CRP",
+        "target": "LacticAcid",
+        "count": 629
+      },
+      {
+        "source": "LacticAcid",
+        "target": "Leucocytes",
+        "count": 565
+      },
+      {
+        "source": "IV Liquid",
+        "target": "IV Antibiotics",
+        "count": 501
+      },
+      {
+        "source": "IV Antibiotics",
+        "target": "Admission NC",
+        "count": 489
+      },
+      {
+        "source": "Leucocytes",
+        "target": "Leucocytes",
+        "count": 458
+      },
+      {
+        "source": "Leucocytes",
+        "target": "LacticAcid",
+        "count": 435
+      }
+    ]
+  },
+  "validation": "chronological_70_15_15_primary",
+  "prefixes": {
+    "n3": {
+      "classification": {
+        "selected_target": "long_case_q75",
+        "target_definition": "Duration exceeds the training-window 75th percentile",
+        "selected_model": "Random Forest",
+        "test_metrics": {
+          "accuracy": 0.7721518987341772,
+          "balanced_accuracy": 0.49505230421260954,
+          "precision": 0.15384615384615385,
+          "recall": 0.07407407407407407,
+          "f1": 0.1,
+          "roc_auc": 0.44359626802374896,
+          "pr_auc": 0.16147370531422517,
+          "brier_score": 0.1702179847679224,
+          "positive_prevalence": 0.17088607594936708,
+          "pr_auc_lift_over_prevalence": 0.9449202014684288,
+          "confusion_matrix": [
+            [
+              120,
+              11
+            ],
+            [
+              25,
+              2
+            ]
+          ],
+          "threshold": 0.35
+        },
+        "temporal_vs_random": {
+          "temporal": {
+            "accuracy": 0.7721518987341772,
+            "balanced_accuracy": 0.49505230421260954,
+            "precision": 0.15384615384615385,
+            "recall": 0.07407407407407407,
+            "f1": 0.1,
+            "roc_auc": 0.44359626802374896,
+            "pr_auc": 0.16147370531422517,
+            "brier_score": 0.1702179847679224,
+            "positive_prevalence": 0.17088607594936708,
+            "pr_auc_lift_over_prevalence": 0.9449202014684288,
+            "confusion_matrix": [
+              [
+                120,
+                11
+              ],
+              [
+                25,
+                2
+              ]
+            ],
+            "threshold": 0.35
+          },
+          "random": {
+            "accuracy": 0.7721518987341772,
+            "balanced_accuracy": 0.5097905282331512,
+            "precision": 0.5,
+            "recall": 0.027777777777777776,
+            "f1": 0.05263157894736842,
+            "roc_auc": 0.5087659380692168,
+            "pr_auc": 0.25468299590458227,
+            "brier_score": 0.20699048859581048,
+            "positive_prevalence": 0.22784810126582278,
+            "pr_auc_lift_over_prevalence": 1.1177753709145555,
+            "confusion_matrix": [
+              [
+                121,
+                1
+              ],
+              [
+                35,
+                1
+              ]
+            ],
+            "threshold": 0.35
+          }
+        },
+        "target_variants": {
+          "long_case_q75": {
+            "description": "Duration exceeds the training-window 75th percentile",
+            "threshold_hours": 532.7894444444444,
+            "selected_model": "Random Forest",
+            "selected_threshold": 0.35,
+            "validation_metrics": {
+              "accuracy": 0.8343949044585988,
+              "balanced_accuracy": 0.5,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "roc_auc": 0.5114503816793894,
+              "pr_auc": 0.22708863526485457,
+              "brier_score": 0.14726983502501276,
+              "positive_prevalence": 0.16560509554140126,
+              "pr_auc_lift_over_prevalence": 1.3712659898685449,
+              "confusion_matrix": [
+                [
+                  131,
+                  0
+                ],
+                [
+                  26,
+                  0
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.7721518987341772,
+              "balanced_accuracy": 0.49505230421260954,
+              "precision": 0.15384615384615385,
+              "recall": 0.07407407407407407,
+              "f1": 0.1,
+              "roc_auc": 0.44359626802374896,
+              "pr_auc": 0.16147370531422517,
+              "brier_score": 0.1702179847679224,
+              "positive_prevalence": 0.17088607594936708,
+              "pr_auc_lift_over_prevalence": 0.9449202014684288,
+              "confusion_matrix": [
+                [
+                  120,
+                  11
+                ],
+                [
+                  25,
+                  2
+                ]
+              ],
+              "threshold": 0.35
+            }
+          },
+          "long_case_median": {
+            "description": "Duration exceeds the training-window median",
+            "threshold_hours": 138.84694444444443,
+            "selected_model": "Logistic Regression",
+            "selected_threshold": 0.35,
+            "validation_metrics": {
+              "accuracy": 0.5095541401273885,
+              "balanced_accuracy": 0.5253029806747461,
+              "precision": 0.47115384615384615,
+              "recall": 0.6901408450704225,
+              "f1": 0.56,
+              "roc_auc": 0.5640353750409434,
+              "pr_auc": 0.5056999179862441,
+              "brier_score": 0.2530700532375989,
+              "positive_prevalence": 0.45222929936305734,
+              "pr_auc_lift_over_prevalence": 1.1182378468146525,
+              "confusion_matrix": [
+                [
+                  31,
+                  55
+                ],
+                [
+                  22,
+                  49
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.43037974683544306,
+              "balanced_accuracy": 0.4927536231884058,
+              "precision": 0.43312101910828027,
+              "recall": 0.9855072463768116,
+              "f1": 0.6017699115044248,
+              "roc_auc": 0.4738641914997557,
+              "pr_auc": 0.457997116594947,
+              "brier_score": 0.2580188920095787,
+              "positive_prevalence": 0.43670886075949367,
+              "pr_auc_lift_over_prevalence": 1.0487470206087193,
+              "confusion_matrix": [
+                [
+                  0,
+                  89
+                ],
+                [
+                  1,
+                  68
+                ]
+              ],
+              "threshold": 0.35
+            }
+          },
+          "open_after_7_days": {
+            "description": "Case remains open 7 days after case start",
+            "threshold_hours": 168.0,
+            "selected_model": "Logistic Regression",
+            "selected_threshold": 0.35,
+            "validation_metrics": {
+              "accuracy": 0.5031847133757962,
+              "balanced_accuracy": 0.5453674677812609,
+              "precision": 0.4019607843137255,
+              "recall": 0.7068965517241379,
+              "f1": 0.5125,
+              "roc_auc": 0.5931731104144897,
+              "pr_auc": 0.45394053964895187,
+              "brier_score": 0.2492781873834808,
+              "positive_prevalence": 0.36942675159235666,
+              "pr_auc_lift_over_prevalence": 1.2287700814635423,
+              "confusion_matrix": [
+                [
+                  38,
+                  61
+                ],
+                [
+                  17,
+                  41
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.35443037974683544,
+              "balanced_accuracy": 0.48740663540038215,
+              "precision": 0.3548387096774194,
+              "recall": 0.9649122807017544,
+              "f1": 0.5188679245283019,
+              "roc_auc": 0.49418099704707313,
+              "pr_auc": 0.37019923581349146,
+              "brier_score": 0.25214079453305915,
+              "positive_prevalence": 0.36075949367088606,
+              "pr_auc_lift_over_prevalence": 1.026166302781257,
+              "confusion_matrix": [
+                [
+                  1,
+                  100
+                ],
+                [
+                  2,
+                  55
+                ]
+              ],
+              "threshold": 0.35
+            }
+          },
+          "open_after_14_days": {
+            "description": "Case remains open 14 days after case start",
+            "threshold_hours": 336.0,
+            "selected_model": "Random Forest",
+            "selected_threshold": 0.2,
+            "validation_metrics": {
+              "accuracy": 0.7770700636942676,
+              "balanced_accuracy": 0.5101873536299766,
+              "precision": 0.5,
+              "recall": 0.02857142857142857,
+              "f1": 0.05405405405405406,
+              "roc_auc": 0.5675644028103045,
+              "pr_auc": 0.2813135033665043,
+              "brier_score": 0.17567963136689999,
+              "positive_prevalence": 0.2229299363057325,
+              "pr_auc_lift_over_prevalence": 1.2618920008154622,
+              "confusion_matrix": [
+                [
+                  121,
+                  1
+                ],
+                [
+                  34,
+                  1
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.6139240506329114,
+              "balanced_accuracy": 0.44773285682376596,
+              "precision": 0.14705882352941177,
+              "recall": 0.13513513513513514,
+              "f1": 0.14084507042253522,
+              "roc_auc": 0.4556622738440921,
+              "pr_auc": 0.26228329088452734,
+              "brier_score": 0.18910827312817674,
+              "positive_prevalence": 0.23417721518987342,
+              "pr_auc_lift_over_prevalence": 1.1200205394528464,
+              "confusion_matrix": [
+                [
+                  92,
+                  29
+                ],
+                [
+                  32,
+                  5
+                ]
+              ],
+              "threshold": 0.2
+            }
+          },
+          "open_after_30_days": {
+            "description": "Case remains open 30 days after case start",
+            "threshold_hours": 720.0,
+            "selected_model": "Logistic Regression",
+            "selected_threshold": 0.65,
+            "validation_metrics": {
+              "accuracy": 0.5732484076433121,
+              "balanced_accuracy": 0.5090852130325815,
+              "precision": 0.15873015873015872,
+              "recall": 0.4166666666666667,
+              "f1": 0.22988505747126436,
+              "roc_auc": 0.5363408521303258,
+              "pr_auc": 0.1832332169991197,
+              "brier_score": 0.23242097047802426,
+              "positive_prevalence": 0.15286624203821655,
+              "pr_auc_lift_over_prevalence": 1.1986506278692415,
+              "confusion_matrix": [
+                [
+                  80,
+                  53
+                ],
+                [
+                  14,
+                  10
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.8417721518987342,
+              "balanced_accuracy": 0.4925925925925926,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "roc_auc": 0.48405797101449277,
+              "pr_auc": 0.15662878426579596,
+              "brier_score": 0.20739374313435716,
+              "positive_prevalence": 0.14556962025316456,
+              "pr_auc_lift_over_prevalence": 1.0759716484345982,
+              "confusion_matrix": [
+                [
+                  133,
+                  2
+                ],
+                [
+                  23,
+                  0
+                ]
+              ],
+              "threshold": 0.65
+            }
+          }
+        }
+      },
+      "regression": {
+        "selected_model": "Median Baseline",
+        "test_metrics": {
+          "mae": 354.92544655414906,
+          "rmse": 788.9130726276364,
+          "median_absolute_error": 129.0936111111111,
+          "r2": -0.11938972330078235,
+          "baseline_improvement_pct": 0.0
+        },
+        "temporal_vs_random": {
+          "temporal": {
+            "mae": 354.92544655414906,
+            "rmse": 788.9130726276364,
+            "median_absolute_error": 129.0936111111111,
+            "r2": -0.11938972330078235,
+            "baseline_improvement_pct": 0.0
+          },
+          "random": {
+            "mae": 675.9194778481012,
+            "rmse": 1448.5894054552066,
+            "median_absolute_error": 126.04430555555555,
+            "r2": -0.19660844403275202
+          }
+        },
+        "beats_median_baseline": false,
+        "baseline_mae": 354.92544655414906
+      }
+    },
+    "n5": {
+      "classification": {
+        "selected_target": "long_case_q75",
+        "target_definition": "Duration exceeds the training-window 75th percentile",
+        "selected_model": "Logistic Regression",
+        "test_metrics": {
+          "accuracy": 0.803921568627451,
+          "balanced_accuracy": 0.484251968503937,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.5081768625075712,
+          "pr_auc": 0.18085389573217808,
+          "brier_score": 0.21006920776806545,
+          "positive_prevalence": 0.16993464052287582,
+          "pr_auc_lift_over_prevalence": 1.0642556171932018,
+          "confusion_matrix": [
+            [
+              123,
+              4
+            ],
+            [
+              26,
+              0
+            ]
+          ],
+          "threshold": 0.75
+        },
+        "temporal_vs_random": {
+          "temporal": {
+            "accuracy": 0.803921568627451,
+            "balanced_accuracy": 0.484251968503937,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "roc_auc": 0.5081768625075712,
+            "pr_auc": 0.18085389573217808,
+            "brier_score": 0.21006920776806545,
+            "positive_prevalence": 0.16993464052287582,
+            "pr_auc_lift_over_prevalence": 1.0642556171932018,
+            "confusion_matrix": [
+              [
+                123,
+                4
+              ],
+              [
+                26,
+                0
+              ]
+            ],
+            "threshold": 0.75
+          },
+          "random": {
+            "accuracy": 0.738562091503268,
+            "balanced_accuracy": 0.4788135593220339,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "roc_auc": 0.4312348668280872,
+            "pr_auc": 0.20059466057640318,
+            "brier_score": 0.2325699794402919,
+            "positive_prevalence": 0.22875816993464052,
+            "pr_auc_lift_over_prevalence": 0.8768852305197053,
+            "confusion_matrix": [
+              [
+                113,
+                5
+              ],
+              [
+                35,
+                0
+              ]
+            ],
+            "threshold": 0.75
+          }
+        },
+        "target_variants": {
+          "long_case_q75": {
+            "description": "Duration exceeds the training-window 75th percentile",
+            "threshold_hours": 574.9127777777778,
+            "selected_model": "Logistic Regression",
+            "selected_threshold": 0.75,
+            "validation_metrics": {
+              "accuracy": 0.8092105263157895,
+              "balanced_accuracy": 0.5338827838827839,
+              "precision": 0.3333333333333333,
+              "recall": 0.11538461538461539,
+              "f1": 0.17142857142857143,
+              "roc_auc": 0.5613553113553114,
+              "pr_auc": 0.29288123747601563,
+              "brier_score": 0.19089947857358908,
+              "positive_prevalence": 0.17105263157894737,
+              "pr_auc_lift_over_prevalence": 1.7122287729367067,
+              "confusion_matrix": [
+                [
+                  120,
+                  6
+                ],
+                [
+                  23,
+                  3
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.803921568627451,
+              "balanced_accuracy": 0.484251968503937,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "roc_auc": 0.5081768625075712,
+              "pr_auc": 0.18085389573217808,
+              "brier_score": 0.21006920776806545,
+              "positive_prevalence": 0.16993464052287582,
+              "pr_auc_lift_over_prevalence": 1.0642556171932018,
+              "confusion_matrix": [
+                [
+                  123,
+                  4
+                ],
+                [
+                  26,
+                  0
+                ]
+              ],
+              "threshold": 0.75
+            }
+          },
+          "long_case_median": {
+            "description": "Duration exceeds the training-window median",
+            "threshold_hours": 146.85222222222222,
+            "selected_model": "Logistic Regression",
+            "selected_threshold": 0.1,
+            "validation_metrics": {
+              "accuracy": 0.5657894736842105,
+              "balanced_accuracy": 0.566963506198708,
+              "precision": 0.5194805194805194,
+              "recall": 0.5797101449275363,
+              "f1": 0.547945205479452,
+              "roc_auc": 0.5517723066177754,
+              "pr_auc": 0.5404582293193739,
+              "brier_score": 0.25844621250867456,
+              "positive_prevalence": 0.45394736842105265,
+              "pr_auc_lift_over_prevalence": 1.1905746500948526,
+              "confusion_matrix": [
+                [
+                  46,
+                  37
+                ],
+                [
+                  29,
+                  40
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.42483660130718953,
+              "balanced_accuracy": 0.49059561128526646,
+              "precision": 0.4266666666666667,
+              "recall": 0.9696969696969697,
+              "f1": 0.5925925925925926,
+              "roc_auc": 0.45297805642633227,
+              "pr_auc": 0.42307840224867416,
+              "brier_score": 0.2708932326646545,
+              "positive_prevalence": 0.43137254901960786,
+              "pr_auc_lift_over_prevalence": 0.9807726597582901,
+              "confusion_matrix": [
+                [
+                  1,
+                  86
+                ],
+                [
+                  2,
+                  64
+                ]
+              ],
+              "threshold": 0.1
+            }
+          },
+          "open_after_7_days": {
+            "description": "Case remains open 7 days after case start",
+            "threshold_hours": 168.0,
+            "selected_model": "Logistic Regression",
+            "selected_threshold": 0.1,
+            "validation_metrics": {
+              "accuracy": 0.5460526315789473,
+              "balanced_accuracy": 0.5317059989191136,
+              "precision": 0.4375,
+              "recall": 0.45901639344262296,
+              "f1": 0.448,
+              "roc_auc": 0.5579174923437219,
+              "pr_auc": 0.4947749192204863,
+              "brier_score": 0.2560684150919008,
+              "positive_prevalence": 0.40131578947368424,
+              "pr_auc_lift_over_prevalence": 1.2328817659264575,
+              "confusion_matrix": [
+                [
+                  55,
+                  36
+                ],
+                [
+                  33,
+                  28
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.3660130718954248,
+              "balanced_accuracy": 0.4876644736842105,
+              "precision": 0.36666666666666664,
+              "recall": 0.9649122807017544,
+              "f1": 0.5314009661835749,
+              "roc_auc": 0.4565058479532163,
+              "pr_auc": 0.3769624663516269,
+              "brier_score": 0.2646707543128188,
+              "positive_prevalence": 0.37254901960784315,
+              "pr_auc_lift_over_prevalence": 1.0118466202069984,
+              "confusion_matrix": [
+                [
+                  1,
+                  95
+                ],
+                [
+                  2,
+                  55
+                ]
+              ],
+              "threshold": 0.1
+            }
+          },
+          "open_after_14_days": {
+            "description": "Case remains open 14 days after case start",
+            "threshold_hours": 336.0,
+            "selected_model": "Logistic Regression",
+            "selected_threshold": 0.45,
+            "validation_metrics": {
+              "accuracy": 0.6842105263157895,
+              "balanced_accuracy": 0.5529964747356052,
+              "precision": 0.3333333333333333,
+              "recall": 0.2972972972972973,
+              "f1": 0.3142857142857143,
+              "roc_auc": 0.6246768507638073,
+              "pr_auc": 0.3702187101958456,
+              "brier_score": 0.2166737672099193,
+              "positive_prevalence": 0.24342105263157895,
+              "pr_auc_lift_over_prevalence": 1.5208984851288794,
+              "confusion_matrix": [
+                [
+                  93,
+                  22
+                ],
+                [
+                  26,
+                  11
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.5359477124183006,
+              "balanced_accuracy": 0.500698974836906,
+              "precision": 0.24242424242424243,
+              "recall": 0.43243243243243246,
+              "f1": 0.3106796116504854,
+              "roc_auc": 0.48415657036346693,
+              "pr_auc": 0.24433284284087664,
+              "brier_score": 0.23821689156371342,
+              "positive_prevalence": 0.24183006535947713,
+              "pr_auc_lift_over_prevalence": 1.0103493230987601,
+              "confusion_matrix": [
+                [
+                  66,
+                  50
+                ],
+                [
+                  21,
+                  16
+                ]
+              ],
+              "threshold": 0.45
+            }
+          },
+          "open_after_30_days": {
+            "description": "Case remains open 30 days after case start",
+            "threshold_hours": 720.0,
+            "selected_model": "Logistic Regression",
+            "selected_threshold": 0.9,
+            "validation_metrics": {
+              "accuracy": 0.8026315789473685,
+              "balanced_accuracy": 0.5124409448818897,
+              "precision": 0.2222222222222222,
+              "recall": 0.08,
+              "f1": 0.11764705882352941,
+              "roc_auc": 0.5067716535433071,
+              "pr_auc": 0.24719655324331824,
+              "brier_score": 0.1884229257058597,
+              "positive_prevalence": 0.16447368421052633,
+              "pr_auc_lift_over_prevalence": 1.5029550437193748,
+              "confusion_matrix": [
+                [
+                  120,
+                  7
+                ],
+                [
+                  23,
+                  2
+                ]
+              ],
+              "threshold": 0.5
+            },
+            "test_metrics": {
+              "accuracy": 0.8366013071895425,
+              "balanced_accuracy": 0.49230769230769234,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "roc_auc": 0.5856187290969899,
+              "pr_auc": 0.1866520084040354,
+              "brier_score": 0.1835612079263962,
+              "positive_prevalence": 0.1503267973856209,
+              "pr_auc_lift_over_prevalence": 1.2416416211224963,
+              "confusion_matrix": [
+                [
+                  128,
+                  2
+                ],
+                [
+                  23,
+                  0
+                ]
+              ],
+              "threshold": 0.9
+            }
+          }
+        }
+      },
+      "regression": {
+        "selected_model": "Median Baseline",
+        "test_metrics": {
+          "mae": 362.72299019607846,
+          "rmse": 798.9436067193424,
+          "median_absolute_error": 129.12083333333334,
+          "r2": -0.12172911573565859,
+          "baseline_improvement_pct": 0.0
+        },
+        "temporal_vs_random": {
+          "temporal": {
+            "mae": 362.72299019607846,
+            "rmse": 798.9436067193424,
+            "median_absolute_error": 129.12083333333334,
+            "r2": -0.12172911573565859,
+            "baseline_improvement_pct": 0.0
+          },
+          "random": {
+            "mae": 649.2754974582426,
+            "rmse": 1544.0302898790892,
+            "median_absolute_error": 132.5288888888889,
+            "r2": -0.15679884869496785
+          }
+        },
+        "beats_median_baseline": false,
+        "baseline_mae": 362.72299019607846
+      }
+    }
+  }
+}

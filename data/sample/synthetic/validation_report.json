@@ -1,0 +1,11 @@
+{
+  "case_count": 250,
+  "event_count": 2081,
+  "user_count": 100,
+  "provider_count": 25,
+  "sla_breach_rate": 0.104,
+  "rework_case_rate": 0.168,
+  "anomaly_case_rate": 0.012,
+  "timestamp_span_days": 182,
+  "chronological_case_rate": 1.0
+}

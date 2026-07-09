@@ -1,0 +1,21 @@
+feature,importance
+numeric__last_activity_train_long_case_rate,3.298764283737854
+categorical__last_resource_B,3.190823745617473
+numeric__prefix_path_train_long_case_rate_smoothed,3.0833398964257057
+categorical__last_resource_L,3.062671943876644
+categorical__activity_set_CRP | ER Registration | ER Sepsis Triage | ER Triage | IV Liquid,2.923969158383784
+categorical__activity_5_Leucocytes,2.6130172524348607
+categorical__last_activity_Leucocytes,2.6130172524348607
+categorical__prefix_path_ER Registration → ER Triage → ER Sepsis Triage → IV Liquid → CRP,2.589576395260791
+categorical__prefix_path_ER Registration → ER Triage → CRP → LacticAcid → Leucocytes,2.4874179096741713
+categorical__prefix_path_ER Registration → ER Triage → ER Sepsis Triage → Leucocytes → LacticAcid,2.470606119432191
+numeric__last_activity_train_median_duration,2.402746792232678
+categorical__prefix_path_ER Registration → ER Triage → ER Sepsis Triage → IV Liquid → LacticAcid,2.371598565187688
+categorical__activity_set_ER Registration | ER Sepsis Triage | ER Triage | IV Liquid | Leucocytes,2.1282646039301985
+categorical__prefix_path_ER Registration → ER Triage → ER Sepsis Triage → CRP → Leucocytes,2.008286512059417
+numeric__resource_train_long_case_rate,1.9908059164124945
+categorical__activity_4_CRP,1.967832667174979
+categorical__prefix_path_ER Registration → ER Triage → ER Sepsis Triage → IV Liquid → Leucocytes,1.9120793816874673
+categorical__prefix_path_ER Registration → ER Triage → CRP → Leucocytes → LacticAcid,1.8758040596545698
+categorical__activity_5_ER Triage,1.8692754212993148
+categorical__last_activity_ER Triage,1.8692754212993148

@@ -1,0 +1,101 @@
+user_id,team,role,region,experience_level
+U-0001,Claims Adjudication,Claims Examiner,Southeast,Senior
+U-0002,Clinical Review,Registered Nurse Reviewer,West,Senior
+U-0003,Claims Adjudication,Claims Examiner,Midwest,Associate
+U-0004,Claims Adjudication,Claims Examiner,Southwest,Intermediate
+U-0005,Intake Operations,Intake Specialist,Midwest,Associate
+U-0006,Payment Operations,Payment Specialist,Southeast,Intermediate
+U-0007,Claims Adjudication,Claims Examiner,Southwest,Intermediate
+U-0008,Claims Adjudication,Claims Examiner,West,Intermediate
+U-0009,Eligibility Operations,Eligibility Analyst,Southeast,Intermediate
+U-0010,Clinical Review,Registered Nurse Reviewer,Southwest,Senior
+U-0011,Clinical Review,Registered Nurse Reviewer,Southeast,Associate
+U-0012,Payment Operations,Payment Specialist,Southwest,Senior
+U-0013,Provider Services,Provider Liaison,Southwest,Associate
+U-0014,Claims Adjudication,Claims Examiner,Midwest,Associate
+U-0015,Clinical Review,Registered Nurse Reviewer,Southwest,Intermediate
+U-0016,Eligibility Operations,Eligibility Analyst,Southeast,Intermediate
+U-0017,Provider Services,Provider Liaison,Northeast,Senior
+U-0018,Intake Operations,Intake Specialist,Northeast,Senior
+U-0019,Claims Adjudication,Claims Examiner,Midwest,Intermediate
+U-0020,Provider Services,Provider Liaison,West,Senior
+U-0021,Claims Adjudication,Claims Examiner,Northeast,Intermediate
+U-0022,Clinical Review,Registered Nurse Reviewer,Midwest,Intermediate
+U-0023,Payment Operations,Payment Specialist,Southwest,Associate
+U-0024,Payment Operations,Payment Specialist,Southeast,Senior
+U-0025,Claims Adjudication,Claims Examiner,Southwest,Associate
+U-0026,Eligibility Operations,Eligibility Analyst,Southeast,Associate
+U-0027,Medical Directors,Medical Director,West,Intermediate
+U-0028,Intake Operations,Intake Specialist,Midwest,Senior
+U-0029,Eligibility Operations,Eligibility Analyst,Midwest,Senior
+U-0030,Claims Adjudication,Claims Examiner,Northeast,Intermediate
+U-0031,Claims Adjudication,Claims Examiner,Midwest,Senior
+U-0032,Payment Operations,Payment Specialist,West,Senior
+U-0033,Clinical Review,Registered Nurse Reviewer,Northeast,Intermediate
+U-0034,Clinical Review,Registered Nurse Reviewer,Southwest,Intermediate
+U-0035,Medical Directors,Medical Director,Midwest,Senior
+U-0036,Eligibility Operations,Eligibility Analyst,Southwest,Intermediate
+U-0037,Eligibility Operations,Eligibility Analyst,Southwest,Intermediate
+U-0038,Medical Directors,Medical Director,Midwest,Associate
+U-0039,Eligibility Operations,Eligibility Analyst,Southeast,Intermediate
+U-0040,Claims Adjudication,Claims Examiner,Southwest,Associate
+U-0041,Clinical Review,Registered Nurse Reviewer,Northeast,Senior
+U-0042,Claims Adjudication,Claims Examiner,Midwest,Associate
+U-0043,Claims Adjudication,Claims Examiner,Northeast,Associate
+U-0044,Clinical Review,Registered Nurse Reviewer,Southwest,Senior
+U-0045,Claims Adjudication,Claims Examiner,Southwest,Associate
+U-0046,Claims Adjudication,Claims Examiner,Northeast,Associate
+U-0047,Clinical Review,Registered Nurse Reviewer,Southwest,Intermediate
+U-0048,Clinical Review,Registered Nurse Reviewer,Midwest,Senior
+U-0049,Claims Adjudication,Claims Examiner,Southwest,Associate
+U-0050,Eligibility Operations,Eligibility Analyst,Northeast,Intermediate
+U-0051,Eligibility Operations,Eligibility Analyst,Northeast,Senior
+U-0052,Intake Operations,Intake Specialist,Midwest,Senior
+U-0053,Claims Adjudication,Claims Examiner,Northeast,Intermediate
+U-0054,Claims Adjudication,Claims Examiner,Southeast,Associate
+U-0055,Claims Adjudication,Claims Examiner,Southwest,Associate
+U-0056,Claims Adjudication,Claims Examiner,Northeast,Associate
+U-0057,Clinical Review,Registered Nurse Reviewer,Southwest,Associate
+U-0058,Provider Services,Provider Liaison,Northeast,Intermediate
+U-0059,Eligibility Operations,Eligibility Analyst,Northeast,Associate
+U-0060,Intake Operations,Intake Specialist,Midwest,Intermediate
+U-0061,Claims Adjudication,Claims Examiner,Southwest,Intermediate
+U-0062,Medical Directors,Medical Director,Northeast,Intermediate
+U-0063,Provider Services,Provider Liaison,Southeast,Associate
+U-0064,Claims Adjudication,Claims Examiner,West,Senior
+U-0065,Provider Services,Provider Liaison,West,Intermediate
+U-0066,Provider Services,Provider Liaison,Midwest,Intermediate
+U-0067,Provider Services,Provider Liaison,Midwest,Associate
+U-0068,Clinical Review,Registered Nurse Reviewer,Southeast,Associate
+U-0069,Intake Operations,Intake Specialist,Southwest,Senior
+U-0070,Clinical Review,Registered Nurse Reviewer,Midwest,Intermediate
+U-0071,Eligibility Operations,Eligibility Analyst,Southeast,Intermediate
+U-0072,Clinical Review,Registered Nurse Reviewer,Northeast,Intermediate
+U-0073,Claims Adjudication,Claims Examiner,Northeast,Intermediate
+U-0074,Eligibility Operations,Eligibility Analyst,West,Senior
+U-0075,Intake Operations,Intake Specialist,Midwest,Intermediate
+U-0076,Clinical Review,Registered Nurse Reviewer,Midwest,Senior
+U-0077,Clinical Review,Registered Nurse Reviewer,Midwest,Associate
+U-0078,Claims Adjudication,Claims Examiner,Southwest,Intermediate
+U-0079,Provider Services,Provider Liaison,Northeast,Intermediate
+U-0080,Claims Adjudication,Claims Examiner,Northeast,Associate
+U-0081,Claims Adjudication,Claims Examiner,Southeast,Associate
+U-0082,Clinical Review,Registered Nurse Reviewer,Midwest,Intermediate
+U-0083,Claims Adjudication,Claims Examiner,Southwest,Senior
+U-0084,Eligibility Operations,Eligibility Analyst,Midwest,Intermediate
+U-0085,Intake Operations,Intake Specialist,Midwest,Senior
+U-0086,Intake Operations,Intake Specialist,West,Senior
+U-0087,Claims Adjudication,Claims Examiner,Northeast,Intermediate
+U-0088,Medical Directors,Medical Director,Midwest,Senior
+U-0089,Eligibility Operations,Eligibility Analyst,Midwest,Associate
+U-0090,Medical Directors,Medical Director,Midwest,Associate
+U-0091,Eligibility Operations,Eligibility Analyst,West,Senior
+U-0092,Claims Adjudication,Claims Examiner,Southeast,Senior
+U-0093,Clinical Review,Registered Nurse Reviewer,West,Associate
+U-0094,Clinical Review,Registered Nurse Reviewer,Southeast,Intermediate
+U-0095,Clinical Review,Registered Nurse Reviewer,Midwest,Intermediate
+U-0096,Provider Services,Provider Liaison,Midwest,Senior
+U-0097,Clinical Review,Registered Nurse Reviewer,West,Intermediate
+U-0098,Intake Operations,Intake Specialist,Midwest,Intermediate
+U-0099,Intake Operations,Intake Specialist,Southeast,Intermediate
+U-0100,Payment Operations,Payment Specialist,Northeast,Intermediate

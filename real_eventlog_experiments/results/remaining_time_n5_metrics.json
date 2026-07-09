@@ -1,0 +1,271 @@
+{
+  "task": "remaining_time_regression",
+  "target": "remaining_time_hours",
+  "target_transform": "Non-baseline estimators train on log1p remaining hours and return expm1 predictions",
+  "prefix_length": 5,
+  "eligible_cases": 1014,
+  "selected_model": "Median Baseline",
+  "selection_policy": "Lowest validation MAE on chronological validation window",
+  "validation_strategy": "temporal_70_15_15",
+  "split_rows": {
+    "train": 709,
+    "validation": 152,
+    "test": 153
+  },
+  "features": [
+    "activity_1",
+    "activity_2",
+    "activity_3",
+    "activity_4",
+    "activity_5",
+    "first_activity",
+    "last_activity",
+    "last_resource",
+    "prefix_path",
+    "activity_set",
+    "prefix_len",
+    "elapsed_hours",
+    "unique_activities_so_far",
+    "observed_rework_count_so_far",
+    "observed_activity_repeat_count",
+    "observed_transition_count",
+    "unique_transitions_so_far",
+    "unique_resources_so_far",
+    "gap_1_2_hours",
+    "gap_2_3_hours",
+    "gap_3_4_hours",
+    "gap_4_5_hours",
+    "mean_gap_hours",
+    "max_gap_hours",
+    "min_gap_hours",
+    "std_gap_hours",
+    "start_hour",
+    "start_dayofweek",
+    "start_month",
+    "weekend_start",
+    "observed_rare_activity_flag",
+    "observed_high_delay_activity_flag",
+    "last_activity_train_median_duration",
+    "last_activity_train_long_case_rate",
+    "prefix_path_train_long_case_rate_smoothed",
+    "activity_set_train_median_duration",
+    "resource_train_median_duration",
+    "resource_train_long_case_rate"
+  ],
+  "historical_encoding_long_case_threshold_hours": 574.9127777777778,
+  "historical_encoding_policy": "Fit on train only for selection; leave-one-out on fitting rows; refit on train+validation only before final test",
+  "models": {
+    "Median Baseline": {
+      "mae": 362.72299019607846,
+      "rmse": 798.9436067193424,
+      "median_absolute_error": 129.12083333333334,
+      "r2": -0.12172911573565859,
+      "baseline_improvement_pct": 0.0
+    },
+    "Mean Baseline": {
+      "mae": 710.1941679065482,
+      "rmse": 834.2568144942308,
+      "median_absolute_error": 673.7840853658535,
+      "r2": -0.22308113227119675
+    },
+    "Log1p Ridge Regression": {
+      "mae": 381.3048553282079,
+      "rmse": 808.5696019017167,
+      "median_absolute_error": 106.1381355567203,
+      "r2": -0.14892204112683216
+    },
+    "Log1p Random Forest": {
+      "mae": 392.0725730053142,
+      "rmse": 783.2478626090876,
+      "median_absolute_error": 179.95255478837254,
+      "r2": -0.07808791518312841
+    },
+    "Log1p Histogram Gradient Boosting": {
+      "mae": 375.230550914319,
+      "rmse": 820.7927344013223,
+      "median_absolute_error": 101.98013645277513,
+      "r2": -0.18392106513676554
+    }
+  },
+  "validation_models": {
+    "Median Baseline": {
+      "mae": 385.35523391812865,
+      "rmse": 925.0510062201456,
+      "median_absolute_error": 123.38652777777776,
+      "r2": -0.10772109235731797
+    },
+    "Mean Baseline": {
+      "mae": 766.8510400840488,
+      "rmse": 964.2905378238244,
+      "median_absolute_error": 717.0990924228176,
+      "r2": -0.20369061936702648
+    },
+    "Log1p Ridge Regression": {
+      "mae": 395.9763062053679,
+      "rmse": 927.1642699471803,
+      "median_absolute_error": 100.52378396346631,
+      "r2": -0.11278801444017361
+    },
+    "Log1p Random Forest": {
+      "mae": 417.0029654114775,
+      "rmse": 890.9700872752807,
+      "median_absolute_error": 191.47297373676415,
+      "r2": -0.027602879989512497
+    },
+    "Log1p Histogram Gradient Boosting": {
+      "mae": 408.3517781398759,
+      "rmse": 963.0073292458738,
+      "median_absolute_error": 95.34178132426936,
+      "r2": -0.20048918088911338
+    }
+  },
+  "temporal_vs_random": {
+    "temporal": {
+      "mae": 362.72299019607846,
+      "rmse": 798.9436067193424,
+      "median_absolute_error": 129.12083333333334,
+      "r2": -0.12172911573565859,
+      "baseline_improvement_pct": 0.0
+    },
+    "random": {
+      "mae": 649.2754974582426,
+      "rmse": 1544.0302898790892,
+      "median_absolute_error": 132.5288888888889,
+      "r2": -0.15679884869496785
+    }
+  },
+  "beats_median_baseline": false,
+  "baseline_mae": 362.72299019607846,
+  "error_by_duration_bucket": [
+    {
+      "duration_bucket": "(-0.001, 41.333]",
+      "cases": 39,
+      "mean_actual_hours": 5.781054131054131,
+      "mae": 135.22311253561253
+    },
+    {
+      "duration_bucket": "(117.767, 322.794]",
+      "cases": 38,
+      "mean_actual_hours": 192.94729532163743,
+      "mae": 57.40558479532164
+    },
+    {
+      "duration_bucket": "(322.794, 4763.787]",
+      "cases": 38,
+      "mean_actual_hours": 1346.3914619883042,
+      "mae": 1205.3872953216376
+    },
+    {
+      "duration_bucket": "(41.333, 117.767]",
+      "cases": 38,
+      "mean_actual_hours": 82.14135964912282,
+      "mae": 58.86280701754385
+    }
+  ],
+  "residual_summary": {
+    "mean_residual_hours": 263.1899872912128,
+    "median_residual_hours": -23.237499999999997,
+    "residual_std_hours": 754.3486709124385,
+    "p90_absolute_error_hours": 1046.7045000000005,
+    "max_absolute_error_hours": 4622.7825
+  },
+  "error_by_process_variant": [
+    {
+      "process_variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 CRP \u2192 LacticAcid \u2192 IV Liquid \u2192 IV Antibiotics \u2192 Admission NC \u2192 Admission NC \u2192 Leucocytes \u2192 CRP \u2192 Release A \u2192 Return ER",
+      "cases": 2,
+      "mae": 1327.2170833333334
+    },
+    {
+      "process_variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 IV Liquid \u2192 CRP \u2192 LacticAcid \u2192 Leucocytes \u2192 IV Antibiotics \u2192 Admission NC \u2192 Leucocytes \u2192 CRP \u2192 Leucocytes \u2192 CRP \u2192 Leucocytes \u2192 Release A \u2192 Return ER",
+      "cases": 2,
+      "mae": 268.4369444444444
+    },
+    {
+      "process_variant": "ER Registration \u2192 ER Triage \u2192 CRP \u2192 Leucocytes \u2192 ER Sepsis Triage",
+      "cases": 2,
+      "mae": 141.00416666666666
+    },
+    {
+      "process_variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 CRP \u2192 Leucocytes",
+      "cases": 4,
+      "mae": 141.00416666666666
+    },
+    {
+      "process_variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 CRP",
+      "cases": 4,
+      "mae": 141.00416666666666
+    },
+    {
+      "process_variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 CRP \u2192 LacticAcid",
+      "cases": 2,
+      "mae": 141.00416666666666
+    },
+    {
+      "process_variant": "ER Registration \u2192 ER Triage \u2192 ER Sepsis Triage \u2192 Leucocytes \u2192 LacticAcid \u2192 CRP \u2192 IV Liquid \u2192 IV Antibiotics",
+      "cases": 2,
+      "mae": 137.32611111111112
+    }
+  ],
+  "top_error_cases": [
+    {
+      "case_id": "UW",
+      "remaining_time_hours": 4763.786666666667,
+      "prediction": 141.00416666666666,
+      "absolute_error": 4622.7825
+    },
+    {
+      "case_id": "DJ",
+      "remaining_time_hours": 3091.4283333333333,
+      "prediction": 141.00416666666666,
+      "absolute_error": 2950.4241666666667
+    },
+    {
+      "case_id": "TX",
+      "remaining_time_hours": 3014.992777777778,
+      "prediction": 141.00416666666666,
+      "absolute_error": 2873.9886111111114
+    },
+    {
+      "case_id": "BK",
+      "remaining_time_hours": 2951.758611111111,
+      "prediction": 141.00416666666666,
+      "absolute_error": 2810.7544444444443
+    },
+    {
+      "case_id": "LG",
+      "remaining_time_hours": 2933.9555555555557,
+      "prediction": 141.00416666666666,
+      "absolute_error": 2792.951388888889
+    },
+    {
+      "case_id": "WI",
+      "remaining_time_hours": 2857.8544444444447,
+      "prediction": 141.00416666666666,
+      "absolute_error": 2716.850277777778
+    },
+    {
+      "case_id": "HL",
+      "remaining_time_hours": 2385.161666666667,
+      "prediction": 141.00416666666666,
+      "absolute_error": 2244.1575000000003
+    },
+    {
+      "case_id": "MS",
+      "remaining_time_hours": 2229.5725,
+      "prediction": 141.00416666666666,
+      "absolute_error": 2088.5683333333336
+    },
+    {
+      "case_id": "PK",
+      "remaining_time_hours": 2064.361388888889,
+      "prediction": 141.00416666666666,
+      "absolute_error": 1923.3572222222224
+    },
+    {
+      "case_id": "VB",
+      "remaining_time_hours": 1893.621388888889,
+      "prediction": 141.00416666666666,
+      "absolute_error": 1752.6172222222224
+    }
+  ]
+}

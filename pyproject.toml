@@ -1,0 +1,31 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = [
+    "ignore:Using `httpx` with `starlette.testclient` is deprecated:DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["src", "backend"]
+branch = true
+omit = ["src/ml/train_all.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 80
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+exclude = ["notebooks", "data", "models"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"app/main.py" = ["E402"]
+"scripts/*.py" = ["E402"]
+"real_eventlog_experiments/scripts/*.py" = ["E402"]
+"backend/routes/*.py" = ["B008"]

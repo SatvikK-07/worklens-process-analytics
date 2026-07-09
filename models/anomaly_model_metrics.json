@@ -1,0 +1,8 @@
+{
+  "model": "Isolation Forest + prefix-safe operational rules",
+  "mode": "early_anomaly_risk",
+  "contamination": 0.015,
+  "threshold": 0.8853323416666666,
+  "score_threshold": 0.8853323416666666,
+  "flagged_cases": 750
+}

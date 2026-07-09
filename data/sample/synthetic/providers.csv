@@ -1,0 +1,26 @@
+provider_id,provider_type,region,historical_delay_rate,document_error_rate
+P-0001,Specialist,West,0.1893,0.62
+P-0002,Independent Practice,Southeast,0.2289,0.0761
+P-0003,Clinic,West,0.0956,0.0679
+P-0004,Clinic,Southeast,0.2119,0.2194
+P-0005,Clinic,West,0.4557,0.2065
+P-0006,Pharmacy,Midwest,0.4554,0.2307
+P-0007,Pharmacy,Southwest,0.3848,0.2059
+P-0008,Hospital,West,0.2493,0.1027
+P-0009,Hospital,Southwest,0.2251,0.1204
+P-0010,Specialist,West,0.3899,0.2383
+P-0011,Hospital,Midwest,0.1793,0.3946
+P-0012,Pharmacy,Northeast,0.332,0.1457
+P-0013,Clinic,Midwest,0.2747,0.1358
+P-0014,Hospital,Northeast,0.2635,0.3756
+P-0015,Independent Practice,West,0.4201,0.068
+P-0016,Hospital,Southeast,0.0851,0.3161
+P-0017,Clinic,Southeast,0.2891,0.1015
+P-0018,Hospital,Southeast,0.5166,0.224
+P-0019,Hospital,Southwest,0.2086,0.2211
+P-0020,Hospital,Midwest,0.2804,0.0834
+P-0021,Hospital,West,0.243,0.1232
+P-0022,Hospital,Midwest,0.1892,0.1821
+P-0023,Hospital,Southeast,0.0669,0.0499
+P-0024,Specialist,Northeast,0.1008,0.0927
+P-0025,Specialist,Northeast,0.3377,0.2184

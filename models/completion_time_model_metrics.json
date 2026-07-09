@@ -1,0 +1,90 @@
+{
+  "selected_model": "Linear Regression",
+  "selection_policy": "Lowest validation MAE on the temporal split",
+  "validation_strategy": "Chronological 70/15/15 train/validation/test",
+  "split_boundaries": {
+    "train": {
+      "rows": 35000,
+      "start": "2025-07-01T00:03:59",
+      "end": "2025-11-06T02:15:19"
+    },
+    "validation": {
+      "rows": 7500,
+      "start": "2025-11-06T02:15:30",
+      "end": "2025-12-03T21:03:19"
+    },
+    "test": {
+      "rows": 7500,
+      "start": "2025-12-03T21:05:16",
+      "end": "2025-12-30T23:49:14"
+    }
+  },
+  "test_rows": 7500,
+  "selected_test_median_absolute_error": 4.6472,
+  "models": {
+    "Median Baseline": {
+      "mae": 17.6263,
+      "rmse": 26.8478,
+      "r2": -0.1096,
+      "mape": 0.7975
+    },
+    "Linear Regression": {
+      "mae": 8.0062,
+      "rmse": 13.3099,
+      "r2": 0.7273,
+      "mape": 0.3249
+    },
+    "Random Forest": {
+      "mae": 8.2635,
+      "rmse": 13.7155,
+      "r2": 0.7104,
+      "mape": 0.281
+    },
+    "XGBoost": {
+      "mae": 7.92,
+      "rmse": 13.7651,
+      "r2": 0.7083,
+      "mape": 0.2699
+    }
+  },
+  "validation_models": {
+    "Median Baseline": {
+      "mae": 17.3303,
+      "rmse": 26.1057,
+      "r2": -0.1077,
+      "mape": 0.7922
+    },
+    "Linear Regression": {
+      "mae": 8.0569,
+      "rmse": 13.5018,
+      "r2": 0.7037,
+      "mape": 0.3193
+    },
+    "Random Forest": {
+      "mae": 8.5173,
+      "rmse": 14.1136,
+      "r2": 0.6762,
+      "mape": 0.2949
+    },
+    "XGBoost": {
+      "mae": 8.1752,
+      "rmse": 13.9449,
+      "r2": 0.6839,
+      "mape": 0.2801
+    }
+  },
+  "split_comparison": {
+    "temporal": {
+      "mae": 8.0062,
+      "rmse": 13.3099,
+      "r2": 0.7273,
+      "mape": 0.3249
+    },
+    "random": {
+      "mae": 8.252,
+      "rmse": 14.4967,
+      "r2": 0.6823,
+      "mape": 0.3218
+    }
+  }
+}
